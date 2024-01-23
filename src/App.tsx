@@ -3,6 +3,7 @@ import { RootState } from './store'
 
 import './App.css'
 import Welcome from './pages/Welcome/Welcome'
+import Chat from './pages/Chat/Chat'
 
 function App() {
   const { API_KEY } = useSelector((state: RootState) => state.user)
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       {API_KEY ? 
-      <div>Test</div>
+      <Chat />
       :
       <Welcome />
       }

@@ -1,7 +1,7 @@
 import { useState, ChangeEvent } from 'react'
 import './Welcome.scss'
 import { useDispatch } from 'react-redux'
-import { setUser } from '../../store'
+import { setUser } from '@store/User/UserSlice'
 
 function Welcome() {
     const [name, setName] = useState<string>('')
