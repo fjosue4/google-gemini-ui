@@ -1,15 +1,9 @@
 import { configureStore, combineReducers, Reducer } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import userReducer from './User/UserSlice';
+import userReducer from './user/userSlice';
 import { TypedUseSelectorHook, useSelector as rawUseSelector } from 'react-redux'
-
-interface UserState {
-  name: string
-  API_KEY: string
-}
-
-
+import { UserState } from 'types/responses';
 
 
 type RootState = {
@@ -42,3 +36,4 @@ const persistor = persistStore(store)
 export { store, persistor, type RootState }
 
 export const useSelector: TypedUseSelectorHook<RootState> = rawUseSelector
+export type AppDispatch = typeof store.dispatch

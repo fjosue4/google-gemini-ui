@@ -1,57 +1,21 @@
-import { ChangeEvent, useState } from 'react';
-import Button from '@components/Button';
-import { useSelector } from 'react-redux';
-import { RootState } from '@store/index';
-
-interface AiResponse {
-  candidates: Array<{
-    content: {
-      parts: Array<{ text: string }>;
-    };
-  }>;
-}
+import { ChangeEvent, useState } from 'react'
+import Button from '@components/Button'
+import { useDispatch } from 'react-redux'
+import { generateTextContent } from '@store/user/dispatchers.user'
+import { AppDispatch } from '@store/index'
 
 function PromptGenerator() {
-  const [prompt, setPrompt] = useState('');
-  const [aiAnswer, setAiAnswer] = useState('');
-  const { API_KEY } = useSelector((state: RootState) => state.user);
+  const [prompt, setPrompt] = useState('')
+  const dispatch: AppDispatch = useDispatch()
 
   const handlePromptChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPrompt(e.target.value);
-  };
+    setPrompt(e.target.value)
+  }
+  const handleSendPrompt = () => {
+    dispatch(generateTextContent({ prompt }))
+  }
 
-  const handleSendPrompt = async () => {
-    try {
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  {
-                    text: prompt,
-                  },
-                ],
-              },
-            ],
-          }),
-        }
-      );
 
-      const data: AiResponse = await response.json();
-
-      const aiAnswerText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-
-      setAiAnswer(aiAnswerText);
-    } catch (error) {
-      console.error('Error sending prompt:', error);
-    }
-  };
 
   return (
     <div>
@@ -69,10 +33,9 @@ function PromptGenerator() {
       </div>
       <div>
         <h2>AI Answer:</h2>
-        <p>{aiAnswer}</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default PromptGenerator;
+export default PromptGenerator
