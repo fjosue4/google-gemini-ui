@@ -24,9 +24,8 @@ function Welcome() {
     return (
       <div className='welcome-page'>
         <h1>Welcome</h1>
-        <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor='name'>Your Name:</label>
+            <div>Your Name:</div>
             <input
               type='text'
               id='name'
@@ -35,7 +34,7 @@ function Welcome() {
             />
           </div>
           <div>
-            <label htmlFor='apiKey'>API Key:</label>
+            <div>API Key:</div>
             <input
               type='text'
               id='apiKey'
@@ -43,8 +42,7 @@ function Welcome() {
               onChange={handleApiKeyChange}
             />
           </div>
-          <button type='submit'>Submit</button>
-        </form>
+          <button type='submit' onClick={handleSubmit}>Submit</button>
       </div>
     )
   }

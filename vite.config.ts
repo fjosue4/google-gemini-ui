@@ -6,6 +6,7 @@ export default {
   resolve: {
     alias: {
       '@store': '/src/store',
+      '@components': '/src/components',
     },
   },
 };

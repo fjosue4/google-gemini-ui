@@ -1,13 +1,14 @@
 import './Button.scss'
-import { ReactNode } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-interface ButtonProps {
-    children: ReactNode
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    children: ReactNode,
 }
 
-function Button ({ children }: ButtonProps) {
+function Button ({ children, ...buttonProps }: ButtonProps) {
     return (
-    <button className='button'>
+    <button className='button'
+    { ...buttonProps } >
         {children}
     </button>
     )

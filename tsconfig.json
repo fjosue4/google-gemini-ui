@@ -16,10 +16,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Add paths section for aliases */
     "baseUrl": "./src",
     "paths": {
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@components/*": ["components/*"]
     }
   },
   "include": ["src"],

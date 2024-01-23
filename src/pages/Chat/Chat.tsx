@@ -1,9 +1,12 @@
-import Button from "../../components/Button"
+import Logout from '@components/Logout/Logout'
+import PromptGenerator from './PromptGenerator'
 
 function Chat () {
+
     return (
         <div>Test
-        <Button>Logout</Button>
+            <Logout/>
+            <PromptGenerator />
         </div>
     )
 }
