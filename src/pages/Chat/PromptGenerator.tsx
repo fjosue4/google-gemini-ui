@@ -1,21 +1,21 @@
 import { ChangeEvent, useState } from 'react'
 import Button from '@components/Button'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { generateTextContent } from '@store/user/dispatchers.user'
-import { AppDispatch } from '@store/index'
+import { AppDispatch, RootState } from '@store/index'
 
 function PromptGenerator() {
   const [prompt, setPrompt] = useState('')
   const dispatch: AppDispatch = useDispatch()
+  const { data } = useSelector((state: RootState) => state.user.conversation || { data: [] })
 
   const handlePromptChange = (e: ChangeEvent<HTMLInputElement>) => {
     setPrompt(e.target.value)
   }
+
   const handleSendPrompt = () => {
     dispatch(generateTextContent({ prompt }))
   }
-
-
 
   return (
     <div>
@@ -32,7 +32,16 @@ function PromptGenerator() {
         <Button onClick={handleSendPrompt}>Send Prompt</Button>
       </div>
       <div>
-        <h2>AI Answer:</h2>
+        {/* Render conversation here */}
+        {data && (
+          <ul>
+            {data.map((message, index) => (
+              <li key={index}>
+                <strong>{message.type === 'inbound' ? 'Inbound:' : 'Outbound:'}</strong> {message.message} - {message.timestamp}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   )
