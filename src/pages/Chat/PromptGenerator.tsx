@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown'
 import Button from '@components/Button'
 import { usePromptGenerator } from './hooks'
 import { useRef, useEffect } from 'react'
+import LoadingLine from '@components/LoadingLine'
 
 function PromptGenerator() {
   const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading } = usePromptGenerator()
@@ -28,6 +29,7 @@ function PromptGenerator() {
               )}
             </div>
           ))}
+          {loading && <LoadingLine />}
       </div>
       <div className='message-input-container'>
         <textarea
