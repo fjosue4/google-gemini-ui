@@ -2,7 +2,6 @@
   "name": "google-gemini-ui",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://fjosue4.github.io/google-gemini-ui/",
   "type": "module",
   "scripts": {
     "start": "vite --port 3000",
