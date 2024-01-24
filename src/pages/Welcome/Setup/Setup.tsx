@@ -4,10 +4,10 @@ import { useSetup } from './hooks'
 
 function Setup() {
 
-    const { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, containerRef, name, API_KEY } = useSetup()
+    const { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, name, API_KEY } = useSetup()
 
     return (
-        <div className='auth-container' ref={containerRef}>
+        <div className={`auth-container ${API_KEY ? 'active' : ''}`}>
             <div className='input-container'>
                 <span>Your Name</span>
                 <input

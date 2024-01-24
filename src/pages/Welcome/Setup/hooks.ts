@@ -1,11 +1,10 @@
 import { setUser } from "@store/user/userSlice"
-import { useState, useRef, ChangeEvent, useEffect } from "react"
+import { useState, ChangeEvent } from "react"
 import { useDispatch } from "react-redux"
 
 export const useSetup = () => {
     const [name, setName] = useState<string>('')
     const [API_KEY, setAPI_KEY] = useState<string>('')
-    const containerRef = useRef(null)
 
     const dispatch = useDispatch()
 
@@ -25,10 +24,5 @@ export const useSetup = () => {
         window.open('https://makersuite.google.com/app/apikey')
     }
 
-    useEffect(() => {
-        if (containerRef.current) {
-            (containerRef.current as HTMLDivElement).classList.add('animate')
-        }
-    }, [])
-    return { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, containerRef, name, API_KEY }
+    return { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, name, API_KEY }
 }
