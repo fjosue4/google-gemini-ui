@@ -2,33 +2,29 @@ import Button from '@components/Button'
 import { usePromptGenerator } from './hooks'
 
 function PromptGenerator() {
-
-  const { handlePromptChange, handleSendPrompt, data, prompt } = usePromptGenerator()
+  const { handlePromptChange, handleSendPrompt, data, prompt, textareaRef } = usePromptGenerator()
 
   return (
-    <div>
-      <div>
-        <input
-          type="text"
-          id="prompt"
+    <div className='conversation-container'>
+      <div className='messages-container'>
+        {data &&
+          data.map((message, index) => (
+            <div className='message' key={index}>
+              <strong>{message.type === 'inbound' ? 'Gemini:' : 'You:'}</strong>{' '}
+              {message.message} - {message.timestamp}
+            </div>
+          ))}
+      </div>
+      <div className='message-input-container'>
+        <textarea
+          id='prompt'
           value={prompt}
+          className='prompt-input'
           placeholder='Type your message...'
           onChange={handlePromptChange}
+          ref={textareaRef}
         />
-      </div>
-      <div>
         <Button onClick={handleSendPrompt}>Send Prompt</Button>
-      </div>
-      <div>
-        {data && (
-          <ul>
-            {data.map((message, index) => (
-              <li key={index}>
-                <strong>{message.type === 'inbound' ? 'Inbound:' : 'Outbound:'}</strong> {message.message} - {message.timestamp}
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
     </div>
   )

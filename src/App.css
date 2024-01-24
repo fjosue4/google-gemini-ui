@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-input {
+input, textarea {
   width: 100%;
   background-color: transparent;
   border: 1px solid transparent;

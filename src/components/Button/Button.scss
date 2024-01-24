@@ -1,7 +1,16 @@
 .button {
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 8px 12px;
-    border-radius: 12px;
-    cursor: pointer;
+    background-color: #096EFF;
+        padding: 12px 14px;
+        border-radius: 99em;
+        font-size: 14px;
+        width: fit-content;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: 0.2s;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: #185ABC;
+            transition: 0.2s;
+        }
 }
