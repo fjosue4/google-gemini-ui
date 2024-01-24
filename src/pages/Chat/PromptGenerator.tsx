@@ -8,11 +8,11 @@ function PromptGenerator() {
   return (
     <div>
       <div>
-        <label htmlFor="prompt">Enter Prompt:</label>
         <input
           type="text"
           id="prompt"
           value={prompt}
+          placeholder='Type your message...'
           onChange={handlePromptChange}
         />
       </div>

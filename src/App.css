@@ -4,3 +4,19 @@
   text-align: center;
   box-sizing: border-box;
 }
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 18px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 99em;
+  transition: background-color 0.3s, border-color 0.3s, opacity 0.4s;
+
+  &:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+  }
+}
