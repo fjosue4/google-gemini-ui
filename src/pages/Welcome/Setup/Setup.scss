@@ -1,0 +1,48 @@
+.auth-container {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+    padding: 80px;
+    border-radius: 16px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    box-shadow: 0 0 10px rgba(89, 143, 240, 0.5);
+    background: linear-gradient(121deg, rgba(255, 255, 255, 0.07) -12.02%, rgba(255, 255, 255, 0.01) 87.55%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+    &.animate {
+        bottom: 0;
+        opacity: 1;
+        transition: 0.8s;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40%;
+        gap: 4px;
+
+        input {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: 18px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 99em;
+            transition: background-color 0.3s, border-color 0.3s, opacity 0.4s;
+
+            &:focus {
+                outline: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}

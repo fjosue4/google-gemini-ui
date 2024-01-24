@@ -47,10 +47,8 @@
     }
 
     .auth-container {
+        position: relative;
         bottom: 0;
-        background: linear-gradient(121deg, rgba(255, 255, 255, 0.07) -12.02%, rgba(255, 255, 255, 0.01) 87.55%);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
         padding: 80px;
         border-radius: 16px;
         width: 80%;
@@ -59,6 +57,12 @@
         align-items: center;
         justify-content: center;
         gap: 18px;
+    
+        box-shadow: 0 0 10px rgba(89, 143, 240, 0.5);
+    
+        background: linear-gradient(121deg, rgba(255, 255, 255, 0.07) -12.02%, rgba(255, 255, 255, 0.01) 87.55%);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
 
         .input-container {
             display: flex;
@@ -97,7 +101,7 @@
         border-radius: 99em;
         font-size: 16px;
         width: fit-content;
-        border: none;
+        border: 1px solid transparent;
         cursor: pointer;
         transition: 0.2s;
 

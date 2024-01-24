@@ -14,7 +14,7 @@ function Welcome() {
           (
             <>
               <h3>Experience Google's largest and most capable AI model</h3>
-              <Button className='start-button' onClick={() => setShowInputs(true)}>Start Setup</Button>
+              <Button className='start-button' onClick={() => setShowInputs(true)}>Get started</Button>
             </>) :
           (<Setup />)
         }
