@@ -66,6 +66,7 @@
         &.transparent {
             border: 1px solid rgba(255, 255, 255, 0.3);
             background-color: transparent;
+
             &:hover {
                 background-color: #232323;
             }
@@ -76,9 +77,34 @@
             transition: 0.2s;
         }
     }
+
     .disclaimer {
         font-size: 12px;
         position: absolute;
         bottom: 18px;
     }
+}
+
+@media screen and (max-width: 800px) {
+    .welcome-page {
+
+        .heading {
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+        .auth-container  {
+            width: 100%;
+            padding: 8%;
+            .input-container {
+                width: 100%;
+            }
+        }
+    }
+
 }
