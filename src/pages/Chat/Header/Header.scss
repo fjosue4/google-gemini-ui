@@ -6,4 +6,13 @@
     padding: 18px 5%;
     background-color: #1A1C1E;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    .header-buttons {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        .github-icon {
+            cursor: pointer;
+        }
+    }
 }

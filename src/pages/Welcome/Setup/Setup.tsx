@@ -14,6 +14,7 @@ function Setup() {
                     type='text'
                     id='name'
                     value={name}
+                    autoComplete='off'
                     onChange={handleNameChange}
                 />
             </div>
@@ -23,6 +24,7 @@ function Setup() {
                     type='password'
                     id='apiKey'
                     value={API_KEY}
+                    autoComplete='new-password'
                     onChange={handleApiKeyChange}
                 />
             </div>
