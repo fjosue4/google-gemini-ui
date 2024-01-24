@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Welcome.scss'
-import Button from '@components/Button'
+import Button from '../../components/Button'
 import Setup from './Setup'
 
 function Welcome() {

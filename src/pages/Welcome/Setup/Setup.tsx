@@ -1,4 +1,4 @@
-import Button from '@components/Button'
+import Button from '../../../components/Button'
 import './Setup.scss'
 import { useSetup } from './hooks'
 

@@ -1,8 +1,8 @@
 import ReactMarkdown from 'react-markdown'
-import Button from '@components/Button'
 import { usePromptGenerator } from './hooks'
 import { useRef, useEffect } from 'react'
-import LoadingLine from '@components/LoadingLine'
+import LoadingLine from '../../components/LoadingLine'
+import Button from '../../components/Button'
 
 function PromptGenerator() {
   const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading } = usePromptGenerator()

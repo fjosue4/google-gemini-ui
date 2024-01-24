@@ -1,5 +1,5 @@
-import { AppDispatch, RootState } from "@store/index"
-import { generateTextContent } from "@store/user/dispatchers.user"
+import { AppDispatch, RootState } from '../../store/index'
+import { generateTextContent } from "../../store/user/dispatchers.user"
 import { useState, ChangeEvent, useEffect, useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 

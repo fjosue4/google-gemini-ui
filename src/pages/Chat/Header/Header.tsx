@@ -1,8 +1,8 @@
 import { Icon } from '@iconify/react';
-import Logout from '@components/Logout/Logout'
-import { RootState } from '@store/index'
 import { useSelector } from 'react-redux'
 import './Header.scss'
+import Logout from '../../../components/Logout/Logout';
+import { RootState } from '../../../store/index';
 
 function Header() {
     const { name } = useSelector((state: RootState) => state.user)
