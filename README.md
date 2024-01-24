@@ -1,30 +1,8 @@
-# React + TypeScript + Vite
+# Google Gemini Chat experience on browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Captura de pantalla 2024-01-24 a las 10 03 21](https://github.com/fjosue4/google-gemini-ui/assets/85136931/05d836b1-7fb1-4df4-8515-d5b7ebffd1a9)
 
-Currently, two official plugins are available:
+![Captura de pantalla 2024-01-24 a las 10 04 43](https://github.com/fjosue4/google-gemini-ui/assets/85136931/09fa6b9d-b469-47af-943e-648d807ddf7a)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Captura de pantalla 2024-01-24 a las 10 05 19](https://github.com/fjosue4/google-gemini-ui/assets/85136931/52c3b31b-766b-40fd-bcc5-29a20a00fb41)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
