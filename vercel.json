@@ -1,15 +1,14 @@
 {
-  "devCommand": "npm start",
-  "builds": [
-    {
-      "src": "src/server.ts",
-      "use": "@vercel/node"
-    }
-  ],
+  "version": 3,
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "^/(.*)$",
       "dest": "/src/server.ts"
     }
-  ]
+  ],
+  "framework": {
+    "version": "5.0.12"
+  },
+  "crons": [],
+  "flags": []
 }
