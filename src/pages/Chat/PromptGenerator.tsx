@@ -4,7 +4,7 @@ import { usePromptGenerator } from './hooks'
 import { useRef, useEffect } from 'react'
 
 function PromptGenerator() {
-  const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef } = usePromptGenerator()
+  const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading } = usePromptGenerator()
 
   const messagesContainerRef = useRef<HTMLDivElement>(null)
 
@@ -39,7 +39,7 @@ function PromptGenerator() {
           onKeyDown={handleKeyDown}
           ref={textareaRef}
         />
-        <Button onClick={handleSendPrompt}>Send</Button>
+        <Button disabled={!prompt || loading} onClick={handleSendPrompt}>Send</Button>
       </div>
     </div>
   )
