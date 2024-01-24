@@ -29,11 +29,8 @@ function Setup() {
                 />
             </div>
             <div className='buttons-container'>
-                {!API_KEY ?
-                    <Button className='start-button transparent' onClick={getAPI}>Get Free API Key</Button>
-                    :
-                    <Button className='start-button' onClick={handleSubmit}>Let's go!</Button>
-                }
+                <Button className='start-button transparent' onClick={getAPI}>Get Free API Key</Button>
+                <Button className='start-button' onClick={handleSubmit}>Start using Gemini</Button>
             </div>
         </div>
     )
