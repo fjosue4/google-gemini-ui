@@ -1,4 +1,4 @@
-import Button from '@components/Button'
+import Button from '../../components/Button'
 import { clearUser } from '../../store/user/userSlice'
 import { useDispatch } from 'react-redux'
 
