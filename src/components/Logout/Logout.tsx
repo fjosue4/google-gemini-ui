@@ -1,5 +1,5 @@
-import { clearUser } from '@store/user/userSlice'
 import Button from '@components/Button'
+import { clearUser } from '../../store/user/userSlice'
 import { useDispatch } from 'react-redux'
 
 function Logout () {

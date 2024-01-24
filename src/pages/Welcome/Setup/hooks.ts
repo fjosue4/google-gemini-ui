@@ -1,4 +1,4 @@
-import { setUser } from "@store/user/userSlice"
+import { setUser } from '../../../store/user/userSlice'
 import { useState, ChangeEvent } from "react"
 import { useDispatch } from "react-redux"
 
