@@ -1,0 +1,121 @@
+.welcome-page {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 40px;
+    position: relative;
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+
+        h1 {
+            font-size: 10rem;
+            line-height: 110%;
+            font-weight: 400;
+            font-size: 7.25rem;
+            letter-spacing: -0.21875rem;
+            margin: 0;
+            transition: 0.4s;
+
+            span {
+                background: linear-gradient(60deg, #598FF0, #B1C5FF);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+        }
+
+        .small-h1 {
+            font-size: 4rem;
+            transition: 0.4s;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.375rem;
+            font-weight: 200;
+        }
+    }
+
+    .auth-container {
+        bottom: 0;
+        background: linear-gradient(121deg, rgba(255, 255, 255, 0.07) -12.02%, rgba(255, 255, 255, 0.01) 87.55%);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 80px;
+        border-radius: 16px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+            gap: 4px;
+
+            input {
+                width: 100%;
+                background-color: transparent;
+                border: 1px solid transparent;
+                padding: 18px 24px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 99em;
+                transition: background-color 0.3s, border-color 0.3s;
+            
+                &:focus {
+                    outline: none;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+
+    .buttons-container {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .start-button {
+        background-color: #096EFF;
+        padding: 18px 24px;
+        border-radius: 99em;
+        font-size: 16px;
+        width: fit-content;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &.transparent {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: transparent;
+            &:hover {
+                background-color: #232323;
+            }
+        }
+
+        &:hover {
+            background-color: #185ABC;
+            transition: 0.2s;
+        }
+    }
+    .disclaimer {
+        font-size: 12px;
+        position: absolute;
+        bottom: 18px;
+    }
+}
