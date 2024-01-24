@@ -5,6 +5,6 @@
 ![Captura de pantalla 2024-01-24 a las 10 05 19](https://github.com/fjosue4/google-gemini-ui/assets/85136931/52c3b31b-766b-40fd-bcc5-29a20a00fb41)
 
 ## Test it online
-[google-gemini-ui.vercel.app](https://google-gemini-ui.vercel.app/)https://google-gemini-ui.vercel.app/
+[google-gemini-ui.vercel.app](https://google-gemini-ui.vercel.app/)
 
 or just run it locally!
