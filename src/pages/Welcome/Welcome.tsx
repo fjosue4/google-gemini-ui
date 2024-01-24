@@ -24,13 +24,13 @@ function Welcome() {
   }
 
   const getAPI = () => {
-    window.open('https://ai.google.dev/')
+    window.open('https://makersuite.google.com/app/apikey')
   }
 
   return (
     <div className='welcome-page'>
       <div className='heading'>
-        <h1 className={showInputs ? 'small-h1' : ''}>Chat with <span>Gemini</span> online</h1>
+        <h1 className={showInputs ? 'small-h1' : ''}>Chat with <span>Gemini</span></h1>
         {!showInputs ?
           (
             <>
