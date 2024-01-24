@@ -13,7 +13,7 @@ function Welcome() {
         {!showInputs ?
           (
             <>
-              <h3>Experience Google's largest and most capable AI model</h3>
+              <h3>Experience Google's largest and most capable AI model in your browser</h3>
               <Button className='start-button' onClick={() => setShowInputs(true)}>Get started</Button>
             </>) :
           (<Setup />)
