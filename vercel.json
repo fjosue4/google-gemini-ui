@@ -1,3 +1,15 @@
 {
-  "buildCommand": "next build"
+  "devCommand": "npm start",
+  "builds": [
+    {
+      "src": "src/server.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/server.ts"
+    }
+  ]
 }
