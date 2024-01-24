@@ -1,17 +1,31 @@
+import ReactMarkdown from 'react-markdown'
 import Button from '@components/Button'
 import { usePromptGenerator } from './hooks'
+import { useRef, useEffect } from 'react'
 
 function PromptGenerator() {
-  const { handlePromptChange, handleSendPrompt, data, prompt, textareaRef } = usePromptGenerator()
+  const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef } = usePromptGenerator()
+
+  const messagesContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight
+    }
+  }, [data])
 
   return (
     <div className='conversation-container'>
-      <div className='messages-container'>
+      <div className='messages-container' ref={messagesContainerRef}>
         {data &&
           data.map((message, index) => (
-            <div className='message' key={index}>
-              <strong>{message.type === 'inbound' ? 'Gemini:' : 'You:'}</strong>{' '}
-              {message.message} - {message.timestamp}
+            <div className={`message ${message.type === 'inbound' ? 'inbound' : 'outbound'}`} key={index}>
+              <strong>{message.type === 'inbound' ? 'Gemini' : 'You'}</strong>
+              {message.type === 'inbound' ? (
+                <ReactMarkdown>{message.message}</ReactMarkdown>
+              ) : (
+                <p>{message.message}</p>
+              )}
             </div>
           ))}
       </div>
@@ -22,9 +36,10 @@ function PromptGenerator() {
           className='prompt-input'
           placeholder='Type your message...'
           onChange={handlePromptChange}
+          onKeyDown={handleKeyDown}
           ref={textareaRef}
         />
-        <Button onClick={handleSendPrompt}>Send Prompt</Button>
+        <Button onClick={handleSendPrompt}>Send</Button>
       </div>
     </div>
   )

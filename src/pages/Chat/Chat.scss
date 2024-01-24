@@ -9,20 +9,36 @@
         height: calc(100vh - 80px);
 
         .messages-container {
-            flex-grow: 1;
+            display: flex;
+            margin-top: auto;
+            flex-direction: column;
+            flex-grow: 10000;
+            padding: 3%;
+            overflow-y: auto;
+        
+            .message {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                white-space: pre-line;
+                margin-bottom: 14px;
+            }
         }
+        
 
         .message-input-container {
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            padding: 5%;
+            padding: 2%;
             gap: 24px;
 
             .prompt-input {
                 height: auto;
                 max-height: 180px;
                 border-radius: 8px;
+                resize: none;
             }
         }
     }
