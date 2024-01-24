@@ -10,7 +10,7 @@ function Logout () {
     }
     console.log('test3')
     return (
-        <Button onClick={handleLogout}>Logout</Button>
+        <Button onClick={handleLogout}>Sign Out</Button>
     )
 }
 

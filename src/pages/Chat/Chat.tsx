@@ -1,11 +1,12 @@
-import Logout from '@components/Logout/Logout'
+import Header from './Header'
 import PromptGenerator from './PromptGenerator'
+import './Chat.scss'
 
-function Chat () {
+function Chat() {
 
     return (
-        <div>Test
-            <Logout/>
+        <div className='chat-page-container'>
+            <Header />
             <PromptGenerator />
         </div>
     )
