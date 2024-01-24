@@ -1,21 +1,9 @@
-import { ChangeEvent, useState } from 'react'
 import Button from '@components/Button'
-import { useDispatch, useSelector } from 'react-redux'
-import { generateTextContent } from '@store/user/dispatchers.user'
-import { AppDispatch, RootState } from '@store/index'
+import { usePromptGenerator } from './hooks'
 
 function PromptGenerator() {
-  const [prompt, setPrompt] = useState('')
-  const dispatch: AppDispatch = useDispatch()
-  const { data } = useSelector((state: RootState) => state.user.conversation || { data: [] })
 
-  const handlePromptChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPrompt(e.target.value)
-  }
-
-  const handleSendPrompt = () => {
-    dispatch(generateTextContent({ prompt }))
-  }
+  const { handlePromptChange, handleSendPrompt, data, prompt } = usePromptGenerator()
 
   return (
     <div>
@@ -32,7 +20,6 @@ function PromptGenerator() {
         <Button onClick={handleSendPrompt}>Send Prompt</Button>
       </div>
       <div>
-        {/* Render conversation here */}
         {data && (
           <ul>
             {data.map((message, index) => (
