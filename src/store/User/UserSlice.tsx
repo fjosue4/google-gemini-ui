@@ -23,6 +23,7 @@ const userSlice = createSlice({
     clearUser: (state) => {
       state.name = initialUserState.name
       state.API_KEY = initialUserState.API_KEY
+      state.conversation = initialUserState.conversation
     },
   },
   extraReducers: (builder) => {
