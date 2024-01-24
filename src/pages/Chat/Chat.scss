@@ -23,6 +23,15 @@
                 text-align: left;
                 white-space: pre-line;
                 margin-bottom: 14px;
+
+                .markdown-render {
+                    pre {
+                        white-space: pre-wrap;
+                        background-color: #000000;
+                        border-radius: 14px;
+                        padding: 18px;
+                    }
+                }
             }
         }
         

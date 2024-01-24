@@ -23,7 +23,7 @@ function PromptGenerator() {
             <div className={`message ${message.type === 'inbound' ? 'inbound' : 'outbound'}`} key={index}>
               <strong>{message.type === 'inbound' ? 'Gemini' : 'You'}</strong>
               {message.type === 'inbound' ? (
-                <ReactMarkdown>{message.message}</ReactMarkdown>
+                <ReactMarkdown className='markdown-render'>{message.message}</ReactMarkdown>
               ) : (
                 <p>{message.message}</p>
               )}
