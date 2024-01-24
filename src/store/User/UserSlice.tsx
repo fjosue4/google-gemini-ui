@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { generateTextContent } from './dispatchers.user'
-import { UserState } from 'types/responses'
+import { UserState } from '../../types/responses'
 
 const initialUserState: UserState = {
   name: '',
