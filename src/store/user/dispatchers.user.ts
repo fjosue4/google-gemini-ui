@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { textResponse } from 'types/responses'
 import { RootState } from '..'
+import { textResponse } from '../../types/responses'
 
 export const generateTextContent = createAsyncThunk(
   'user/generateTextContent',
