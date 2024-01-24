@@ -13,7 +13,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 12px;
+        gap: 28px;
         width: 100%;
 
         h1 {
@@ -34,7 +34,8 @@
         }
 
         .small-h1 {
-            font-size: 4rem;
+            font-size: 2.8rem;
+            letter-spacing: -0.12rem;
             transition: 0.4s;
         }
 
