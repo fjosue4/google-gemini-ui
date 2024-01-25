@@ -31,7 +31,11 @@ export const generateTextContent = createAsyncThunk(
 
       const data: textResponse = await response.json()
 
-      const aiAnswerText = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
+      const aiAnswerText = data.candidates?.[0]?.content?.parts?.[0]?.text
+
+      if (aiAnswerText === undefined) {
+        throw Error(data?.error?.message)
+      }
 
       return aiAnswerText
   }

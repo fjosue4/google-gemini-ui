@@ -5,7 +5,7 @@ import LoadingLine from '../../components/LoadingLine'
 import Button from '../../components/Button'
 
 function PromptGenerator() {
-  const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading } = usePromptGenerator()
+  const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading, error } = usePromptGenerator()
 
   const messagesContainerRef = useRef<HTMLDivElement>(null)
 
@@ -30,6 +30,7 @@ function PromptGenerator() {
             </div>
           ))}
           {loading && <LoadingLine />}
+          {error && <div className='error'>{error} <br /> Sign Out to enter a new API Key</div>}
       </div>
       <div className='message-input-container'>
         <textarea

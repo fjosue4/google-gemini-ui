@@ -5,7 +5,6 @@ import Button from '../Button'
 function Logout () {
     const dispatch = useDispatch()
     const handleLogout = () => {
-        console.log('test2')
         dispatch(clearUser())
     }
     return (

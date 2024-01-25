@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 export const usePromptGenerator = () => {
   const [prompt, setPrompt] = useState('')
   const dispatch: AppDispatch = useDispatch()
-  const { data, loading } = useSelector((state: RootState) => state.user.conversation || { data: [] })
+  const { data, loading, error } = useSelector((state: RootState) => state.user.conversation || { data: [] })
 
   const handlePromptChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setPrompt(e.target.value)
@@ -41,5 +41,5 @@ export const usePromptGenerator = () => {
     }
   }, [prompt])
 
-  return { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading }
+  return { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading, error }
 }

@@ -4,6 +4,9 @@ export interface textResponse {
         parts: Array<{ text: string }>
       }
     }>
+    error?: {
+      message: string
+    }
   }
 
   export interface Message {

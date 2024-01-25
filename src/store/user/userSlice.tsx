@@ -47,7 +47,6 @@ const userSlice = createSlice({
         })
       })
       .addCase(generateTextContent.fulfilled, (state, action) => {
-
         state.conversation.loading = false
 
         const inboundTimestamp = new Date().toISOString()
