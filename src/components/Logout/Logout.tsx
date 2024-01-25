@@ -8,7 +8,6 @@ function Logout () {
         console.log('test2')
         dispatch(clearUser())
     }
-    console.log('test3')
     return (
         <Button onClick={handleLogout}>Sign Out</Button>
     )
