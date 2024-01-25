@@ -25,6 +25,9 @@ const userSlice = createSlice({
       state.API_KEY = initialUserState.API_KEY
       state.conversation = initialUserState.conversation
     },
+    clearChat: (state) => {
+      state.conversation = initialUserState.conversation
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -62,5 +65,5 @@ const userSlice = createSlice({
   },
 })
 
-export const { setUser, clearUser } = userSlice.actions
+export const { setUser, clearUser, clearChat } = userSlice.actions
 export default userSlice.reducer
