@@ -23,6 +23,13 @@
                 text-align: left;
                 white-space: pre-line;
                 margin-bottom: 14px;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                padding-top: 14px;
+
+                &:first-child {
+                    border-top: 0;
+                    padding-top: 0;
+                }
 
                 .markdown-render {
                     pre {
