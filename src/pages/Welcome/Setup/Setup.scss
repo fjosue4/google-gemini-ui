@@ -25,6 +25,10 @@
         flex-direction: column;
         align-items: flex-start;
         width: 40%;
-        gap: 4px;
+        gap: 4px; 
+        p {
+            width: 100%;
+            text-align: center;
+        }
     }
 }

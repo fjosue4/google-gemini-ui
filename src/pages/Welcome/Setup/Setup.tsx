@@ -4,7 +4,7 @@ import { useSetup } from './hooks'
 
 function Setup() {
 
-    const { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, name, API_KEY } = useSetup()
+    const { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, name, API_KEY, showApiError } = useSetup()
 
     return (
         <div className={`auth-container ${API_KEY ? 'active' : ''}`}>
@@ -27,6 +27,7 @@ function Setup() {
                     autoComplete='new-password'
                     onChange={handleApiKeyChange}
                 />
+                {showApiError && <p>You need to provide valid API Key! Get it using the left button.</p>}
             </div>
             <div className='buttons-container'>
                 <Button className='start-button transparent' onClick={getAPI}>Get Free API Key</Button>

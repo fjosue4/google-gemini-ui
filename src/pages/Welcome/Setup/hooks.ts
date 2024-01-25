@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux"
 export const useSetup = () => {
     const [name, setName] = useState<string>('')
     const [API_KEY, setAPI_KEY] = useState<string>('')
+    const [showApiError, setShowApiError] = useState(false)
 
     const dispatch = useDispatch()
 
@@ -17,6 +18,10 @@ export const useSetup = () => {
     }
 
     const handleSubmit = () => {
+        if (API_KEY.length === 0) {
+            setShowApiError(true)
+            return
+        }
         dispatch(setUser({ name, API_KEY }))
     }
 
@@ -24,5 +29,5 @@ export const useSetup = () => {
         window.open('https://makersuite.google.com/app/apikey')
     }
 
-    return { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, name, API_KEY }
+    return { handleNameChange, handleApiKeyChange, handleSubmit, getAPI, name, API_KEY, showApiError }
 }
