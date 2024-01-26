@@ -1,10 +1,21 @@
-# Google Gemini Chat experience on browser
+
+# Google Gemini Web Chat
+
+Experience the new Google AI Model 'Gemini' on any device. 
+This application is pure front-end, the API key and your name are stored in your browser and used to make requests, and all server connections are made directly to Google Servers.
+[Test it online](https://google-gemini-ui.vercel.app/)
 
 ![Captura de pantalla 2024-01-24 a las 10 03 21](https://github.com/fjosue4/google-gemini-ui/assets/85136931/05d836b1-7fb1-4df4-8515-d5b7ebffd1a9)
 
-![Captura de pantalla 2024-01-24 a las 10 05 19](https://github.com/fjosue4/google-gemini-ui/assets/85136931/52c3b31b-766b-40fd-bcc5-29a20a00fb41)
 
-## Test it online
-[google-gemini-ui.vercel.app](https://google-gemini-ui.vercel.app/)
+## Changelog
 
-or just run it locally!
+- User now gets feedback if try to access without an API Key.
+- User gets feedback if try to request with an invalid API Key.
+- It's possible to clear the chat history saved on the browser.
+
+## Features requested:
+- Light mode (Some screens won't work well with the dark colors Google uses)
+
+## Known issues/bugs:
+- None reported yet.
