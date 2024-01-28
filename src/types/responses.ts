@@ -22,5 +22,6 @@ export interface textResponse {
       loading: boolean
       error?: string
       data?: Message[]
-    }
+    },
+    theme: 'dark' | 'light'
   }
