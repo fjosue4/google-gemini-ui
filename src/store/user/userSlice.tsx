@@ -9,7 +9,8 @@ const initialUserState: UserState = {
     loading: false,
     error: undefined,
     data: []
-  }
+  },
+  theme: 'dark'
 }
 
 const userSlice = createSlice({
@@ -27,6 +28,9 @@ const userSlice = createSlice({
     },
     clearChat: (state) => {
       state.conversation = initialUserState.conversation
+    },
+    setTheme: (state, action) => {
+      state.theme = action.payload
     },
   },
   extraReducers: (builder) => {
@@ -64,5 +68,5 @@ const userSlice = createSlice({
   },
 })
 
-export const { setUser, clearUser, clearChat } = userSlice.actions
+export const { setUser, clearUser, clearChat, setTheme } = userSlice.actions
 export default userSlice.reducer

@@ -4,8 +4,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 18px 5%;
-    background-color: #1A1C1E;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: var(--setup-background);
+    border-bottom: var(--light-border);
+    transition: 0.2s;
 
     .header-buttons {
         display: flex;
@@ -13,6 +14,21 @@
         gap: 18px;
         .github-icon, .clear-icon {
             cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        .header-buttons{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        span {
+            display: none;
         }
     }
 }

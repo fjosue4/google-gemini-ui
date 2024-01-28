@@ -30,7 +30,7 @@ function Setup() {
                 {showApiError && <p>You need to provide valid API Key! Get it using the left button.</p>}
             </div>
             <div className='buttons-container'>
-                <Button className='start-button transparent' onClick={getAPI}>Get Free API Key</Button>
+                <Button className='start-button secondary' onClick={getAPI}>Get Free API Key</Button>
                 <Button className='start-button' onClick={handleSubmit}>Start using Gemini</Button>
             </div>
         </div>

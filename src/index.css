@@ -4,15 +4,30 @@
   font-family: 'Google Sans', sans-serif, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #060606;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --white: rgba(255, 255, 255, 0.87);
+  --blue-color: #096EFF;
+
+  --background-color: hsl(0, 0%, 2%);
+  --text-color: var(--white);
+  --button-background: var(--blue-color);
+  --transparent-bg: transparent;
+  --light-border: 1px solid rgba(255, 255, 255, 0.4);
+  --input-background: transparent;
+  --input-border: 1px solid rgba(255, 255, 255, 0.4);
+  --setup-background: linear-gradient(121deg, rgba(255, 255, 255, 0.07) -12.02%, rgba(255, 255, 255, 0.01) 87.55%);
+  --input-focus-background: rgba(255, 255, 255, 0.1);
+  --input-focus-border: rgba(255, 255, 255, 0.5);
+  --setup-border: 1px solid transparent;
+  --gemini-font-color: linear-gradient(60deg, #598FF0, #B1C5FF);
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 * {
