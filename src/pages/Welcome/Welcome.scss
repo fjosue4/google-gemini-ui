@@ -61,7 +61,7 @@
     }
   
     .start-button {
-      background-color: var(--button-background); /* Use the light theme variable here */
+      background-color: var(--button-background);
       padding: 18px 24px;
       border-radius: 99em;
       font-size: 16px;
@@ -71,9 +71,9 @@
       transition: 0.2s;
   
       &.secondary {
-        border: var(--secondary-button-border);
+        border: var(--light-border);
         color: var(--text-color);
-        background-color: var(--secondary-button-background);
+        background-color: var(--transparent-bg);
         &:hover {
             filter: brightness(90%);
             transition: 0.2s;

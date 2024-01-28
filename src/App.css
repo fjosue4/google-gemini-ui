@@ -2,8 +2,8 @@
   --background-color: hsl(0, 0%, 2%);
   --text-color: rgba(255, 255, 255, 0.87);
   --button-background: #096EFF;
-  --secondary-button-background: transparent;
-  --secondary-button-border: 1px solid rgba(255, 255, 255, 0.4);;
+  --transparent-bg: transparent;
+  --light-border: 1px solid rgba(255, 255, 255, 0.4);;
   --input-background: transparent;
   --input-border: 1px solid rgba(255, 255, 255, 0.4);
   --setup-background: linear-gradient(121deg, rgba(255, 255, 255, 0.07) -12.02%, rgba(255, 255, 255, 0.01) 87.55%);
@@ -30,7 +30,7 @@
   --input-border: 1px solid rgba(191, 191, 191, 0.5);
   --input-focus-background: rgba(229, 229, 229, 0.1);
   --input-focus-border: rgba(0, 0, 0, 0.5);
-  --secondary-button-border: 1px solid rgba(8, 8, 8, 0.4);
+  --light-border: 1px solid rgba(8, 8, 8, 0.4);
   --setup-background: #efefeff5;
   --setup-border: 1px solid rgba(8, 8, 8, 0.24);
   --gemini-font-color: linear-gradient(60deg, #598FF0, #096EFF);
