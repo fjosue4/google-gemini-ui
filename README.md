@@ -13,9 +13,13 @@ This application is pure front-end, the API key and your name are stored in your
 - User now gets feedback if try to access without an API Key.
 - User gets feedback if try to request with an invalid API Key.
 - It's possible to clear the chat history saved on the browser.
+- Light mode
+![image](https://github.com/fjosue4/google-gemini-ui/assets/85136931/ca32447d-aded-488d-866b-8f5db594e04b)
+
 
 ## Features requested:
-- Light mode (Some screens won't work well with the dark colors Google uses)
+- Easier way to setup API Key
+- Greeting or empty state when chatlog is empty.
 
 ## Known issues/bugs:
 - None reported yet.
