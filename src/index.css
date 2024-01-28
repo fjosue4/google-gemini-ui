@@ -10,10 +10,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   --white: rgba(255, 255, 255, 0.87);
+  --blue-color: #096EFF;
 
   --background-color: hsl(0, 0%, 2%);
   --text-color: var(--white);
-  --button-background: #096EFF;
+  --button-background: var(--blue-color);
   --transparent-bg: transparent;
   --light-border: 1px solid rgba(255, 255, 255, 0.4);
   --input-background: transparent;
