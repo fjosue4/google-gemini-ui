@@ -1,27 +1,23 @@
 .button {
-    background-color: #096EFF;
-        padding: 12px 14px;
-        border-radius: 99em;
-        font-size: 14px;
-        width: fit-content;
-        border: 1px solid transparent;
-        cursor: pointer;
+    background-color: var(--button-background);
+    color: var(--text-color);
+    padding: 12px 14px;
+    border-radius: 99em;
+    font-size: 14px;
+    width: fit-content;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+  
+    &.disabled {
+        filter: brightness(40%);
+      pointer-events: none;
+  
+      &:hover {
+        filter: brightness(90%);
         transition: 0.2s;
-        white-space: nowrap;
-
-        &.disabled {
-            background-color: #1A1C1E;
-            pointer-events: none;
-
-            &:hover {
-                background-color: #35383b;
-                transition: 0.2s;
-            }
-
-        }
-
-        &:hover {
-            background-color: #185ABC;
-            transition: 0.2s;
-        }
-}
+      }
+    }
+  }
+  

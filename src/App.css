@@ -1,22 +1,59 @@
+:root {
+  --background-color: hsl(0, 0%, 2%);
+  --text-color: rgba(255, 255, 255, 0.87);
+  --button-background: #096EFF;
+  --secondary-button-background: transparent;
+  --secondary-button-border: 1px solid rgba(255, 255, 255, 0.4);;
+  --input-background: transparent;
+  --input-border: 1px solid rgba(255, 255, 255, 0.4);
+  --setup-background: linear-gradient(121deg, rgba(255, 255, 255, 0.07) -12.02%, rgba(255, 255, 255, 0.01) 87.55%);
+  --input-focus-background: rgba(255, 255, 255, 0.1);
+  --input-focus-border: rgba(255, 255, 255, 0.5);
+  --setup-border: 1px solid transparent;
+  --gemini-font-color: linear-gradient(60deg, #598FF0, #B1C5FF);
+}
+
 #root {
   margin: 0;
   max-width: 100%;
   text-align: center;
   box-sizing: border-box;
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.app-wrapper.light {
+  --background-color: #eaeaea;
+  --text-color: #080808;
+  --input-background: rgba(198, 198, 198, 0.1);
+  --input-border: 1px solid rgba(191, 191, 191, 0.5);
+  --input-focus-background: rgba(229, 229, 229, 0.1);
+  --input-focus-border: rgba(0, 0, 0, 0.5);
+  --secondary-button-border: 1px solid rgba(8, 8, 8, 0.4);
+  --setup-background: #efefeff5;
+  --setup-border: 1px solid rgba(8, 8, 8, 0.24);
+  --gemini-font-color: linear-gradient(60deg, #598FF0, #096EFF);
+}
+
+.app-wrapper {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 input, textarea {
   width: 100%;
-  background-color: transparent;
-  border: 1px solid transparent;
+  background-color: var(--input-background);
+  color: var(--text-color);
   padding: 18px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: var(--input-border);
   border-radius: 99em;
   transition: background-color 0.3s, border-color 0.3s, opacity 0.4s;
+  box-sizing: border-box;
 
   &:focus {
-      outline: none;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    background-color: var(--input-focus-background);
+    border-color: var(--input-focus-border);
   }
 }

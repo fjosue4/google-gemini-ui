@@ -9,106 +9,107 @@
     gap: 40px;
     position: relative;
     padding: 5%;
-
+  
+    .theme-toggle-wrapper {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+  
     .heading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 28px;
-        width: 100%;
-
-        h1 {
-            font-size: 10rem;
-            line-height: 110%;
-            font-weight: 400;
-            font-size: 7.25rem;
-            letter-spacing: -0.21875rem;
-            margin: 0;
-            transition: 0.4s;
-
-            span {
-                background: linear-gradient(60deg, #598FF0, #B1C5FF);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      width: 100%;
+  
+      h1 {
+        font-size: 10rem;
+        line-height: 110%;
+        font-weight: 400;
+        font-size: 7.25rem;
+        letter-spacing: -0.21875rem;
+        margin: 0;
+        transition: 0.4s;
+  
+        span {
+          background: var(--gemini-font-color);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
         }
-
-        .small-h1 {
-            font-size: 2.8rem;
-            letter-spacing: -0.12rem;
-            transition: 0.4s;
-        }
-
-        h3 {
-            margin: 0;
-            font-size: 1.375rem;
-            font-weight: 200;
-        }
+      }
+  
+      .small-h1 {
+        font-size: 2.8rem;
+        letter-spacing: -0.12rem;
+        transition: 0.4s;
+      }
+  
+      h3 {
+        margin: 0;
+        font-size: 1.375rem;
+        font-weight: 200;
+      }
     }
-
+  
     .buttons-container {
-        display: flex;
-        align-items: center;
-        gap: 18px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
     }
-
+  
     .start-button {
-        background-color: #096EFF;
-        padding: 18px 24px;
-        border-radius: 99em;
-        font-size: 16px;
-        width: fit-content;
-        border: 1px solid transparent;
-        cursor: pointer;
-        transition: 0.2s;
-
-        &.transparent {
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background-color: transparent;
-
-            &:hover {
-                background-color: #232323;
-            }
-        }
-
+      background-color: var(--button-background); /* Use the light theme variable here */
+      padding: 18px 24px;
+      border-radius: 99em;
+      font-size: 16px;
+      width: fit-content;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.2s;
+  
+      &.secondary {
+        border: var(--secondary-button-border);
+        color: var(--text-color);
+        background-color: var(--secondary-button-background);
         &:hover {
-            background-color: #185ABC;
+            filter: brightness(90%);
             transition: 0.2s;
-        }
+          }
+      }
     }
-
+  
     .disclaimer {
-        font-size: 12px;
-        position: absolute;
-        bottom: 18px;
+      font-size: 12px;
+      position: absolute;
+      bottom: 18px;
     }
-}
-
-@media screen and (max-width: 800px) {
+  }
+  
+  @media screen and (max-width: 800px) {
     .welcome-page {
-
-        .heading {
-
-            h1 {
-                font-size: 4rem;
-            }
-
-            h3 {
-                font-size: 1rem;
-            }
+      .heading {
+        h1 {
+          font-size: 4rem;
         }
-        .auth-container  {
-            width: 100%;
-            padding: 8%;
-            .input-container {
-                width: 100%;
-            }
-            .buttons-container {
-                flex-direction: column;
-            }
+  
+        h3 {
+          font-size: 1rem;
         }
+      }
+  
+      .auth-container {
+        width: 100%;
+        padding: 8%;
+        .input-container {
+          width: 100%;
+        }
+        .buttons-container {
+          flex-direction: column;
+        }
+      }
     }
-
-}
+  }
+  
