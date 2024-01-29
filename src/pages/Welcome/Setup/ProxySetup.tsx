@@ -21,7 +21,7 @@ function ProxySetup({ handleProxyChange, proxy }: ProxyProps) {
                         checked={useProxy}
                     />
                 </label>
-                <span>I want to use a Proxy</span>
+                <span>I want to use a proxy</span>
             </div>
             {useProxy && (
                 <div className='input-container'>
@@ -33,7 +33,7 @@ function ProxySetup({ handleProxyChange, proxy }: ProxyProps) {
                         autoComplete='new-password'
                         onChange={handleProxyChange}
                     />
-                    <p>Enter full proxy before URL, for example:<br />https://corsproxy.io/?</p>
+                    <p>Example of a valid proxy to enter:<br />https://corsproxy.io/?</p>
                 </div>
             )}
         </>
