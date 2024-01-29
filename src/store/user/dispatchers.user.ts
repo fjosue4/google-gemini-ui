@@ -6,10 +6,10 @@ export const generateTextContent = createAsyncThunk(
   'user/generateTextContent',
   async ({ prompt }: { prompt: string }, thunkApi) => {
     const currentState = thunkApi.getState() as RootState
-    const apiKey = currentState.user.API_KEY
+    const { API_KEY: apiKey, proxy } = currentState.user
 
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
+        `${proxy ? proxy : ''}https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
         {
           method: 'POST',
           headers: {
