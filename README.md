@@ -17,7 +17,8 @@ This application is pure front-end, the API key and your name are stored in your
 - A proxy can be passed for all API requests from Setup.
 
 ![image](https://github.com/fjosue4/google-gemini-ui/assets/85136931/ca32447d-aded-488d-866b-8f5db594e04b)
-<img width="563" alt="image" src="https://github.com/fjosue4/google-gemini-ui/assets/85136931/02aa1fec-6585-4bf6-8025-1e9c9ef18a92">
+![image](https://github.com/fjosue4/google-gemini-ui/assets/85136931/46e5b343-90d3-4e4a-9165-8d83214ef1c1)
+
 
 
 
