@@ -27,12 +27,13 @@ function ProxySetup({ handleProxyChange, proxy }: ProxyProps) {
                 <div className='input-container'>
                     <span>Proxy</span>
                     <input
-                        type='password'
+                        type='text'
                         id='apiKey'
                         value={proxy}
                         autoComplete='new-password'
                         onChange={handleProxyChange}
                     />
+                    <p>Enter full proxy before URL, for example:<br />https://corsproxy.io/?</p>
                 </div>
             )}
         </>
