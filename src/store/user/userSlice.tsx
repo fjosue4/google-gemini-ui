@@ -10,6 +10,7 @@ const initialUserState: UserState = {
     error: undefined,
     data: []
   },
+  proxy: undefined,
   theme: 'dark'
 }
 
@@ -20,11 +21,13 @@ const userSlice = createSlice({
     setUser: (state, action) => {
       state.name = action.payload.name
       state.API_KEY = action.payload.API_KEY
+      state.proxy = action.payload.proxy
     },
     clearUser: (state) => {
       state.name = initialUserState.name
       state.API_KEY = initialUserState.API_KEY
       state.conversation = initialUserState.conversation
+      state.proxy = initialUserState.proxy
     },
     clearChat: (state) => {
       state.conversation = initialUserState.conversation

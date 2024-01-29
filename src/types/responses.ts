@@ -23,5 +23,6 @@ export interface textResponse {
       error?: string
       data?: Message[]
     },
+    proxy?: string
     theme: 'dark' | 'light'
   }

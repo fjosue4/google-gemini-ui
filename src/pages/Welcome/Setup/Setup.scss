@@ -32,4 +32,11 @@
             text-align: center;
         }
     }
+    .proxy-toggle {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        gap: 14px;
+        cursor: pointer;
+    }
 }
