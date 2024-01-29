@@ -13,15 +13,17 @@ This application is pure front-end, the API key and your name are stored in your
 - User now gets feedback if try to access without an API Key.
 - User gets feedback if try to request with an invalid API Key.
 - It's possible to clear the chat history saved on the browser.
-- Light mode
+- Light mode.
+- A proxy can be passed for all API requests from Setup.
 
 ![image](https://github.com/fjosue4/google-gemini-ui/assets/85136931/ca32447d-aded-488d-866b-8f5db594e04b)
+<img width="563" alt="image" src="https://github.com/fjosue4/google-gemini-ui/assets/85136931/02aa1fec-6585-4bf6-8025-1e9c9ef18a92">
+
 
 
 ## Features requested:
 - Easier way to setup API Key
 - Greeting or empty state when chatlog is empty.
-- Add Proxy feature.
 
 ## Known issues/bugs:
 - None reported yet.
