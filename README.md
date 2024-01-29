@@ -21,6 +21,7 @@ This application is pure front-end, the API key and your name are stored in your
 ## Features requested:
 - Easier way to setup API Key
 - Greeting or empty state when chatlog is empty.
+- Add Proxy feature.
 
 ## Known issues/bugs:
 - None reported yet.
