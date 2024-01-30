@@ -26,3 +26,12 @@ This application is pure front-end, the API key and your name are stored in your
 
 ## Known issues/bugs:
 - None reported yet.
+
+## How to Run Locally:
+- npm i
+- npm start
+
+## Deploy is ready for Vercel.
+
+## Not using Vercel to deploy?
+Check this [step-by-step guide](https://www.tssfl.com/viewtopic.php?t=6778) created by [@TSSFL](https://github.com/TSSFL)
