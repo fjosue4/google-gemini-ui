@@ -29,8 +29,13 @@ function PromptGenerator() {
               )}
             </div>
           ))}
-          {loading && <LoadingLine />}
-          {error && <div className='error'>{error} <br /> Sign Out to enter a new API Key</div>}
+        {loading && <LoadingLine />}
+        {error && (
+          <div className='error'>
+            {error}
+            {error.includes('API') && (<><br /> Sign Out to enter a new API Key </>)}
+          </div>
+        )}
       </div>
       <div className='message-input-container'>
         <textarea
