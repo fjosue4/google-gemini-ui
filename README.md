@@ -15,6 +15,7 @@ This application is pure front-end, the API key and your name are stored in your
 - It's possible to clear the chat history saved on the browser.
 - Light mode.
 - A proxy can be passed for all API requests from Setup.
+- Fix: Gemini now understands the Chat History.
 
 ![image](https://github.com/fjosue4/google-gemini-ui/assets/85136931/ca32447d-aded-488d-866b-8f5db594e04b)
 ![image](https://github.com/fjosue4/google-gemini-ui/assets/85136931/122d3a93-1011-458d-b064-c650213fc209)
