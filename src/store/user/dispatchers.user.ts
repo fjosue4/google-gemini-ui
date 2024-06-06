@@ -6,38 +6,39 @@ export const generateTextContent = createAsyncThunk(
   'user/generateTextContent',
   async ({ prompt }: { prompt: string }, thunkApi) => {
     const currentState = thunkApi.getState() as RootState
-    const { API_KEY: apiKey, proxy } = currentState.user
+    const { API_KEY: apiKey, proxy, conversation } = currentState.user
 
-      const response = await fetch(
-        `${proxy ? proxy : ''}https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  {
-                    text: prompt,
-                  },
-                ],
-              },
-            ],
-          }),
-        }
-      )
+    const conversationParts = conversation.data
+      ? conversation.data.flatMap(entry => entry.message)
+      : []
 
-      const data: textResponse = await response.json()
+    const allParts = [...conversationParts, prompt]
 
-      const aiAnswerText = data.candidates?.[0]?.content?.parts?.[0]?.text
+    const requestBody = {
+      contents: [{
+        parts: allParts.map(text => ({ text }))
+      }]
+    }
 
-      if (aiAnswerText === undefined) {
-        throw Error(data?.error?.message)
+    const response = await fetch(
+      `${proxy ? proxy : ''}https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
       }
+    )
 
-      return aiAnswerText
+    const data: textResponse = await response.json()
+
+    const aiAnswerText = data.candidates?.[0]?.content?.parts?.[0]?.text
+
+    if (aiAnswerText === undefined) {
+      throw Error(data?.error?.message)
+    }
+
+    return aiAnswerText
   }
 )
-
