@@ -16,6 +16,7 @@ This application is pure front-end, the API key and your name are stored in your
 - Light mode.
 - A proxy can be passed for all API requests from Setup.
 - Fix: Gemini now understands the Chat History.
+- Hotfix: Last outbound message was being sent twice.
 
 ![image](https://github.com/fjosue4/google-gemini-ui/assets/85136931/b4f15537-6e23-482f-9822-d9d4191dc320)
 
