@@ -47,24 +47,27 @@ const userSlice = createSlice({
         state.conversation.error = undefined
 
         const outboundTimestamp = new Date().toISOString()
+
         state?.conversation?.data?.push({
           type: 'outbound',
           message: action.meta.arg.prompt,
           timestamp: outboundTimestamp,
+          role: 'user'
         })
       })
       .addCase(generateTextContent.fulfilled, (state, action) => {
         state.conversation.loading = false
 
         const inboundTimestamp = new Date().toISOString()
+
         state?.conversation?.data?.push({
           type: 'inbound',
           message: action.payload,
           timestamp: inboundTimestamp,
+          role: 'model'
         })
       })
       .addCase(generateTextContent.rejected, (state, action) => {
-
         state.conversation.loading = false
         state.conversation.error = action.error.message || 'Error generating content'
       })

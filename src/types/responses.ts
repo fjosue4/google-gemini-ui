@@ -13,6 +13,7 @@ export interface textResponse {
     type: 'inbound' | 'outbound'
     message: string
     timestamp: string
+    role: string
   }
 
   export interface UserState {

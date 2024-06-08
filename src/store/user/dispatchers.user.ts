@@ -8,8 +8,8 @@ export const generateTextContent = createAsyncThunk(
     const currentState = thunkApi.getState() as RootState
     const { API_KEY: apiKey, proxy, conversation } = currentState.user
 
-    const conversationParts = conversation.data
-      ? conversation.data.flatMap(entry => entry.message)
+    const conversationParts = conversation.data && conversation.data.length > 0
+      ? conversation.data.slice(0, -1).map(entry => entry.message)
       : []
 
     const allParts = [...conversationParts, prompt]
