@@ -19,6 +19,7 @@
   --setup-background: #efefeff5;
   --setup-border: 1px solid rgba(8, 8, 8, 0.24);
   --gemini-font-color: linear-gradient(60deg, #598FF0, #096EFF);
+  --text-color-white: #ffffff;
 }
 
 .app-wrapper {
