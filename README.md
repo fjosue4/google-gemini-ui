@@ -37,6 +37,12 @@ This application is pure front-end, the API key and your name are stored in your
 - npm i
 - npm start
 
+### Run with Docker
+
+```sh
+docker compose up # http://localhost:5173
+```
+
 ## Deploy is ready for Vercel.
 
 ## Not using Vercel to deploy?
