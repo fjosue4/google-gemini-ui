@@ -14,7 +14,7 @@ export const usePromptGenerator = () => {
   }
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]  // Limit to one file
+    const file = e.target.files?.[0]
     if (file) {
       const reader = new FileReader()
       reader.onload = () => {
