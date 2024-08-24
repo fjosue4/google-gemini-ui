@@ -34,3 +34,4 @@ export interface textResponse {
     selectedModel: string
     theme: 'dark' | 'light'
   }
+  
