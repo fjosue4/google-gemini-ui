@@ -1,13 +1,19 @@
 export interface textResponse {
-    candidates: Array<{
-      content: {
-        parts: Array<{ text: string }>
-      }
-    }>
-    error?: {
-      message: string
+  candidates: Array<{
+    content: {
+      parts: Array<{ 
+        text?: string; 
+        inlineData?: { 
+          mimeType: string; 
+          data: string; 
+        } 
+      }>
     }
+  }>
+  error?: {
+    message: string
   }
+}
 
   export interface Message {
     type: 'inbound' | 'outbound'
@@ -25,5 +31,6 @@ export interface textResponse {
       data?: Message[]
     },
     proxy?: string
+    selectedModel: string
     theme: 'dark' | 'light'
   }

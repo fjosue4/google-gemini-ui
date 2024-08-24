@@ -15,6 +15,12 @@
         .github-icon, .clear-icon {
             cursor: pointer;
         }
+        .model-select-input {
+            border-radius: 12px;
+            padding: 4px 2px;
+            background-color: var(--setup-background);
+            color: var(--text-color);
+        }
     }
 }
 
