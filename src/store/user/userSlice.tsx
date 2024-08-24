@@ -10,6 +10,7 @@ const initialUserState: UserState = {
     error: undefined,
     data: []
   },
+  selectedModel: 'gemini-pro',
   proxy: undefined,
   theme: 'dark'
 }
@@ -34,6 +35,9 @@ const userSlice = createSlice({
     },
     setTheme: (state, action) => {
       state.theme = action.payload
+    },
+    setSelectedModel: (state, action) => {
+      state.selectedModel = action.payload
     },
   },
   extraReducers: (builder) => {
@@ -74,5 +78,5 @@ const userSlice = createSlice({
   },
 })
 
-export const { setUser, clearUser, clearChat, setTheme } = userSlice.actions
+export const { setUser, clearUser, clearChat, setTheme, setSelectedModel } = userSlice.actions
 export default userSlice.reducer

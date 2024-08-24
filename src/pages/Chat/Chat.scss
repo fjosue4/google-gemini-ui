@@ -16,7 +16,7 @@
             flex-grow: 10000;
             padding: 3%;
             overflow-y: auto;
-        
+
             .message {
                 display: flex;
                 flex-direction: column;
@@ -43,7 +43,7 @@
                 }
             }
         }
-        
+
 
         .message-input-container {
             display: flex;
@@ -58,6 +58,24 @@
                 border-radius: 8px;
                 resize: none;
             }
+
+            .file-selector-container {
+                display: flex;
+                flex-direction: column;
+
+                .file-selector-input {
+                    display: none;
+                }
+
+                .file-selector-label {
+                    padding: 8px 4px;
+                    cursor: pointer;
+                    .attach-icon {
+                        color: var(--text-color);
+                    }
+                }
+            }
+
         }
     }
 }

@@ -1,20 +1,16 @@
 import ReactMarkdown from 'react-markdown'
 import { usePromptGenerator } from './hooks'
-import { useRef, useEffect } from 'react'
 import LoadingLine from '../../components/LoadingLine'
 import Button from '../../components/Button'
+import { useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store'
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 function PromptGenerator() {
-  const { handlePromptChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading, error } = usePromptGenerator()
-
+  const { handlePromptChange, handleFileChange, handleSendPrompt, handleKeyDown, data, prompt, textareaRef, loading, error, base64File } = usePromptGenerator()
+  const { selectedModel } = useSelector((state: RootState) => state.user)
   const messagesContainerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (messagesContainerRef.current) {
-      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight
-    }
-  }, [data])
-
   return (
     <div className='conversation-container'>
       <div className='messages-container' ref={messagesContainerRef}>
@@ -47,10 +43,25 @@ function PromptGenerator() {
           onKeyDown={handleKeyDown}
           ref={textareaRef}
         />
+        {selectedModel === 'gemini-1.5-flash' && (
+          <div className='file-selector-container'>
+            <input
+              id='file-input'
+              className='file-selector-input'
+              type="file"
+              multiple
+              onChange={handleFileChange}
+            />
+            <label htmlFor='file-input' className='file-selector-label'>
+              <Icon icon={base64File ? 'mdi:image-sync-outline' : 'mdi:image-plus-outline'} height={24} />
+            </label>
+          </div>
+        )}
         <Button disabled={!prompt || loading} onClick={handleSendPrompt}>Send</Button>
       </div>
     </div>
   )
 }
+
 
 export default PromptGenerator
